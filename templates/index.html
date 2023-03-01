@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calories App</title>
+    <link rel="stylesheet" href="static/index.css">
+</head>
+<body>
+<div class="container flex align-center justify-center column gap">
+    <div class="flex align-center justify-center">
+        <h1 class="title">Calories App</h1>
+    </div>
+    <form class="flex gap column align-center" action="/" method="post">
+        <div class="flex align-center gap">
+            {{form.country.label}} {{form.country}}
+        </div>
+        <div class="flex align-center gap">
+            {{form.city.label}} {{form.city}}
+        </div>
+        <div class="flex align-center gap">
+            {{form.weight.label}} {{form.weight}}
+        </div>
+        <div class="flex align-center gap">
+            {{form.height.label}} {{form.height}}
+        </div>
+        <div class="flex align-center gap">
+            {{form.age.label}} {{form.age}}
+        </div>
+        <div class="flex justify-center">
+            {{form.submit_button}}
+        </div>
+    </form>
+        {% if result %}
+        <p>Calories you should eat per day: {{calories}}</p>
+        {% endif %}
+</div>
+</body>
+</html>
